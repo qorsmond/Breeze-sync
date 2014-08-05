@@ -1,0 +1,35 @@
+﻿<div data-ng-controller="AppController">
+    <header>
+        <h1>Breeze Sync</h1>
+        <p>Data is always saved to local storage when the user is offline or online. The user decides when to sync the data by using the sync button.</p>
+        
+        <h3>Sync flow</h3>
+        <ul>
+            <li>First; Any changes are saved to the server.</li>
+            <li>Then; any records found in the cache that is also in the tombstones is deleted where the modified time stamp is bigger than the current modified time stamp.</li>
+            <li>Then; for each table, all records are pulled from the server where the modified time stamp is bigger than the current modified time stamp.</li>
+        </ul>
+        
+
+    </header>
+    
+    <br/>
+
+    <section>
+        
+        <h4>
+            Data grid displaying clients.<br/>
+        </h4>
+        <p>This list will initially be empty press the sync button to get the clients. This is because the list is loaded from the entity cache.</p>
+        <div class="dataGridStyle" ng-grid="clientGridOptions"></div>
+        <p>Edit items to test sync</p>
+        <br/>
+        <button type="button" class="btn btn-primary" ng-click="save()">Save changes</button>
+        <button type="button" class="btn btn-success" ng-click="sync()">Sync</button>
+
+    </section>
+    <footer>
+        
+
+    </footer>
+</div>

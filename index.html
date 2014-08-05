@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Breeze Sync</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/ng-grid.css" rel="stylesheet" />
+    <link href="Content/Site.css" rel="stylesheet" />
+</head>
+    <body>
+        <!-- App appears here -->
+        <div id="applicationHost" class="container" data-ng-app="app" data-ng-include="'app/view.html'"></div>
+        
+        <!-- 3rd party libraries -->
+        <script src="Scripts/jquery-1.10.2.js"></script>
+        <script src="Scripts/angular.js"></script>
+        <script src="Scripts/breeze.debug.js"></script>
+        <script src="Scripts/breeze.angular.js"></script>
+        <script src="Scripts/ng-grid-2.0.11.debug.js"></script>
+        
+        <!-- Add breeze.savequeuing which needs Q (Breeze does not need Q)-->
+        <script src="Scripts/q.min.js"></script>
+        <script src="Scripts/breeze.savequeuing.js"></script>
+        
+        <!-- App libraries -->
+        <script src="app/main.js"></script>
+        <script src="app/dataservice.js"></script>
+        <script src="app/controller.js"></script>
+        <script src="app/repositories.js"></script>
+        <script src="app/syncservice.js"></script>
+    </body>
+</html>
