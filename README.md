@@ -7,4 +7,6 @@ The sync uses triggers on the db side that creates and maintains ModifiedTimeSta
 
 When data is deleted a trigger adds it to a tombstone table so that clients can remove it from their caches.
 
+At this time all the tables that is used must contain a ModifiedTimeStamp column of type bigint.
+
 Better descriptions coming..
